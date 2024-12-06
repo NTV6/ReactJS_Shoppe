@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import WOW from 'wowjs'
+import 'animate.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 function App() {
+
+  useEffect(() => {
+    const wow = new WOW.WOW({
+      animateClass: 'animate__animated',
+      live: false, // Tắt tự động kiểm tra DOM để cải thiện hiệu suất
+    });
+    wow.init();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Content />
+      <Footer />
     </div>
   );
 }
