@@ -59,7 +59,7 @@
 
 .header__list-first:hover,
 .header__list ul li a:hover,
-.header__list ul li button:hover{
+.header__list ul li button:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -82,6 +82,7 @@
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
+    font-size: 1.4rem;
     height: var(--height-header-filter);
     border-top: 1px solid #cbcbcb;
     border-bottom: 1px solid #cbcbcb;
