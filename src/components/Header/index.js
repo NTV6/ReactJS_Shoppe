@@ -14,6 +14,9 @@ import thongbao_buoctoc from '../../assets/image/thongbao_buoctoc.png'
 function Header() {
     const [stateModal, setStateModal] = useState(false)
     const [stateRegister, setStateRegister] = useState(true)
+    const notificationBody = [1, 2, 3, 4, 5]
+    const barSearchHistory = ['hihi', 'haha']
+    const cartListItem = [1]
 
     function handleOpenRegister() {
         setStateModal(true)
@@ -56,71 +59,21 @@ function Header() {
                             <div className="header__notification">
                                 <h4>Thông Báo Mới Nhận</h4>
                                 <ul>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="" />
-                                        <div className="header__notification-body">
-                                            <div className="header__notification--name">Mua sắm hết ga hết số</div>
-                                            <div className="header__notification--decription">Bạn ơi đã đến lúc chốt đơn các
-                                                sản
-                                                phẩm bạn yêu thích rồi tôi tên là nguyễn tuấn việt tôi sinh ra và lớn
-                                                lên ở
-                                                thôn vũ lăng xã dân hòa huyện thanh oai thành phố hà nội việt nam trái
-                                                đất
-                                                vũ trụ dải ngân hà</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="" />
-                                        <div className="header__notification-body">
-                                            <div className="header__notification--name">Mua sắm hết ga hết số</div>
-                                            <div className="header__notification--decription">Bạn ơi đã đến lúc chốt đơn các
-                                                sản
-                                                phẩm bạn yêu thích rồi tôi tên là nguyễn tuấn việt tôi sinh ra và lớn
-                                                lên ở
-                                                thôn vũ lăng xã dân hòa huyện thanh oai thành phố hà nội việt nam trái
-                                                đất
-                                                vũ trụ dải ngân hà</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="" />
-                                        <div className="header__notification-body">
-                                            <div className="header__notification--name">Mua sắm hết ga hết số</div>
-                                            <div className="header__notification--decription">Bạn ơi đã đến lúc chốt đơn các
-                                                sản
-                                                phẩm bạn yêu thích rồi tôi tên là nguyễn tuấn việt tôi sinh ra và lớn
-                                                lên ở
-                                                thôn vũ lăng xã dân hòa huyện thanh oai thành phố hà nội việt nam trái
-                                                đất
-                                                vũ trụ dải ngân hà</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="" />
-                                        <div className="header__notification-body">
-                                            <div className="header__notification--name">Mua sắm hết ga hết số</div>
-                                            <div className="header__notification--decription">Bạn ơi đã đến lúc chốt đơn các
-                                                sản
-                                                phẩm bạn yêu thích rồi tôi tên là nguyễn tuấn việt tôi sinh ra và lớn
-                                                lên ở
-                                                thôn vũ lăng xã dân hòa huyện thanh oai thành phố hà nội việt nam trái
-                                                đất
-                                                vũ trụ dải ngân hà</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="" />
-                                        <div className="header__notification-body">
-                                            <div className="header__notification--name">Mua sắm hết ga hết số</div>
-                                            <div className="header__notification--decription">Bạn ơi đã đến lúc chốt đơn các
-                                                sản
-                                                phẩm bạn yêu thích rồi tôi tên là nguyễn tuấn việt tôi sinh ra và lớn
-                                                lên ở
-                                                thôn vũ lăng xã dân hòa huyện thanh oai thành phố hà nội việt nam trái
-                                                đất
-                                                vũ trụ dải ngân hà</div>
-                                        </div>
-                                    </li>
+                                    {notificationBody.map((item, index) =>
+                                        <li key={index}>
+                                            <img src={thongbao_buoctoc} alt="" />
+                                            <div className="header__notification-body">
+                                                <div className="header__notification--name">Mua sắm hết ga hết số</div>
+                                                <div className="header__notification--decription">Bạn ơi đã đến lúc chốt đơn các
+                                                    sản
+                                                    phẩm bạn yêu thích rồi tôi tên là nguyễn tuấn việt tôi sinh ra và lớn
+                                                    lên ở
+                                                    thôn vũ lăng xã dân hòa huyện thanh oai thành phố hà nội việt nam trái
+                                                    đất
+                                                    vũ trụ dải ngân hà</div>
+                                            </div>
+                                        </li>
+                                    )}
                                 </ul>
                                 <button>Xem tất cả</button>
                             </div>
@@ -153,8 +106,7 @@ function Header() {
                             <div className="header__bar-search--history">
                                 <h4>Lịch sử Tìm kiếm</h4>
                                 <ul>
-                                    <li>Hihi</li>
-                                    <li>Haha</li>
+                                    {barSearchHistory.map((item, index) => <li key={index}>{item}</li>)}
                                 </ul>
                             </div>
                         </div>
@@ -180,155 +132,36 @@ function Header() {
                         <i><FontAwesomeIcon icon={faCartShopping} /></i>
                         <span className="header__cart-notice">3</span>
                         <div className="header__cart-list">
-
-                            {/* GIỎ HÀNG KO CÓ SP THÌ HIỆN CÁI NÀY */}
-                            {/* <div className="header__cart-list--nocart">
-                                <img src="../../https://bizweb.dktcdn.net/100/364/149/themes/733818/assets/empty-cart.png?1715520353362" alt=""/>
-                            </div> */}
-
-                            {/* GIỎ HÀNG CÓ SẢN PHẨM THÌ HIỆN CÁI NÀY */}
-                            <div className="header__cart-list--item">
-                                <h4>Sản Phẩm Đã Thêm</h4>
-                                <ul>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="Ảnh sản phẩm trong giỏ hàng" />
-                                        <div className="header__cart-list--item-body">
-                                            <div className="cart-list--item-body-header">
-                                                <div className="cart-list--item-body-header-text">Bộ kem đặc trị vùng mắt
+                            {cartListItem.length <= 0 ?
+                                < div className="header__cart-list--nocart">
+                                    <img src="https://bizweb.dktcdn.net/100/364/149/themes/733818/assets/empty-cart.png?1715520353362" alt="" />
+                                </div> :
+                                <div div className="header__cart-list--item">
+                                    <h4>Sản Phẩm Đã Thêm</h4>
+                                    <ul>
+                                        {cartListItem.map((item, index) =>
+                                            <li key={index}>
+                                                <img src={thongbao_buoctoc} alt="Ảnh sản phẩm trong giỏ hàng" />
+                                                <div className="header__cart-list--item-body">
+                                                    <div className="cart-list--item-body-header">
+                                                        <div className="cart-list--item-body-header-text">Bộ kem đặc trị vùng mắt
+                                                        </div>
+                                                        <div className="cart-list--item-body-header-price">2.070.000đ</div>
+                                                        <div className="cart-list--item-body-header-multiplied">x</div>
+                                                        <div className="cart-list--item-body-header-quantity">1</div>
+                                                    </div>
+                                                    <div className="cart-list--item-body-decription">
+                                                        <div className="cart-list--item-body-decription-text">Phân loại hàng: Bạc
+                                                        </div>
+                                                        <div className="cart-list--item-body-decription-delete">Xóa</div>
+                                                    </div>
                                                 </div>
-                                                <div className="cart-list--item-body-header-price">2.070.000đ</div>
-                                                <div className="cart-list--item-body-header-multiplied">x</div>
-                                                <div className="cart-list--item-body-header-quantity">1</div>
-                                            </div>
-                                            <div className="cart-list--item-body-decription">
-                                                <div className="cart-list--item-body-decription-text">Phân loại hàng: Bạc
-                                                </div>
-                                                <div className="cart-list--item-body-decription-delete">Xóa</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="Ảnh sản phẩm trong giỏ hàng" />
-                                        <div className="header__cart-list--item-body">
-                                            <div className="cart-list--item-body-header">
-                                                <div className="cart-list--item-body-header-text">Bộ kem đặc trị vùng mắt
-                                                </div>
-                                                <div className="cart-list--item-body-header-price">2.070.000đ</div>
-                                                <div className="cart-list--item-body-header-multiplied">x</div>
-                                                <div className="cart-list--item-body-header-quantity">1</div>
-                                            </div>
-                                            <div className="cart-list--item-body-decription">
-                                                <div className="cart-list--item-body-decription-text">Phân loại hàng: Bạc
-                                                </div>
-                                                <div className="cart-list--item-body-decription-delete">Xóa</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="Ảnh sản phẩm trong giỏ hàng" />
-                                        <div className="header__cart-list--item-body">
-                                            <div className="cart-list--item-body-header">
-                                                <div className="cart-list--item-body-header-text">Bộ kem đặc trị vùng mắt
-                                                </div>
-                                                <div className="cart-list--item-body-header-price">2.070.000đ</div>
-                                                <div className="cart-list--item-body-header-multiplied">x</div>
-                                                <div className="cart-list--item-body-header-quantity">1</div>
-                                            </div>
-                                            <div className="cart-list--item-body-decription">
-                                                <div className="cart-list--item-body-decription-text">Phân loại hàng: Bạc
-                                                </div>
-                                                <div className="cart-list--item-body-decription-delete">Xóa</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="Ảnh sản phẩm trong giỏ hàng" />
-                                        <div className="header__cart-list--item-body">
-                                            <div className="cart-list--item-body-header">
-                                                <div className="cart-list--item-body-header-text">Bộ kem đặc trị vùng mắt
-                                                </div>
-                                                <div className="cart-list--item-body-header-price">2.070.000đ</div>
-                                                <div className="cart-list--item-body-header-multiplied">x</div>
-                                                <div className="cart-list--item-body-header-quantity">1</div>
-                                            </div>
-                                            <div className="cart-list--item-body-decription">
-                                                <div className="cart-list--item-body-decription-text">Phân loại hàng: Bạc
-                                                </div>
-                                                <div className="cart-list--item-body-decription-delete">Xóa</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="Ảnh sản phẩm trong giỏ hàng" />
-                                        <div className="header__cart-list--item-body">
-                                            <div className="cart-list--item-body-header">
-                                                <div className="cart-list--item-body-header-text">Bộ kem đặc trị vùng mắt
-                                                </div>
-                                                <div className="cart-list--item-body-header-price">2.070.000đ</div>
-                                                <div className="cart-list--item-body-header-multiplied">x</div>
-                                                <div className="cart-list--item-body-header-quantity">1</div>
-                                            </div>
-                                            <div className="cart-list--item-body-decription">
-                                                <div className="cart-list--item-body-decription-text">Phân loại hàng: Bạc
-                                                </div>
-                                                <div className="cart-list--item-body-decription-delete">Xóa</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="Ảnh sản phẩm trong giỏ hàng" />
-                                        <div className="header__cart-list--item-body">
-                                            <div className="cart-list--item-body-header">
-                                                <div className="cart-list--item-body-header-text">Bộ kem đặc trị vùng mắt
-                                                </div>
-                                                <div className="cart-list--item-body-header-price">2.070.000đ</div>
-                                                <div className="cart-list--item-body-header-multiplied">x</div>
-                                                <div className="cart-list--item-body-header-quantity">1</div>
-                                            </div>
-                                            <div className="cart-list--item-body-decription">
-                                                <div className="cart-list--item-body-decription-text">Phân loại hàng: Bạc
-                                                </div>
-                                                <div className="cart-list--item-body-decription-delete">Xóa</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="Ảnh sản phẩm trong giỏ hàng" />
-                                        <div className="header__cart-list--item-body">
-                                            <div className="cart-list--item-body-header">
-                                                <div className="cart-list--item-body-header-text">Bộ kem đặc trị vùng mắt
-                                                </div>
-                                                <div className="cart-list--item-body-header-price">2.070.000đ</div>
-                                                <div className="cart-list--item-body-header-multiplied">x</div>
-                                                <div className="cart-list--item-body-header-quantity">1</div>
-                                            </div>
-                                            <div className="cart-list--item-body-decription">
-                                                <div className="cart-list--item-body-decription-text">Phân loại hàng: Bạc
-                                                </div>
-                                                <div className="cart-list--item-body-decription-delete">Xóa</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src={thongbao_buoctoc} alt="Ảnh sản phẩm trong giỏ hàng" />
-                                        <div className="header__cart-list--item-body">
-                                            <div className="cart-list--item-body-header">
-                                                <div className="cart-list--item-body-header-text">Bộ kem đặc trị vùng mắt
-                                                </div>
-                                                <div className="cart-list--item-body-header-price">2.070.000đ</div>
-                                                <div className="cart-list--item-body-header-multiplied">x</div>
-                                                <div className="cart-list--item-body-header-quantity">1</div>
-                                            </div>
-                                            <div className="cart-list--item-body-decription">
-                                                <div className="cart-list--item-body-decription-text">Phân loại hàng: Bạc
-                                                </div>
-                                                <div className="cart-list--item-body-decription-delete">Xóa</div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <button>Xem Giỏ Hàng</button>
-                            </div>
+                                            </li>
+                                        )}
+                                    </ul>
+                                    <button>Xem Giỏ Hàng</button>
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
