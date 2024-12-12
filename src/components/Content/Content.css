@@ -220,7 +220,12 @@
     display: block;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
+}
+
+.product-item__price{
+    display: flex;
+    justify-content: space-between;
 }
 
 .product-item__price-old,

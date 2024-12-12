@@ -16,7 +16,7 @@ function Header() {
     const [stateRegister, setStateRegister] = useState(true)
     const notificationBody = [1, 2, 3, 4, 5]
     const barSearchHistory = ['hihi', 'haha']
-    const cartListItem = [1]
+    const cartListItem = [1, 2, 3, 4, 5, 6, 7]
 
     function handleOpenRegister() {
         setStateModal(true)
@@ -136,7 +136,7 @@ function Header() {
                                 < div className="header__cart-list--nocart">
                                     <img src="https://bizweb.dktcdn.net/100/364/149/themes/733818/assets/empty-cart.png?1715520353362" alt="" />
                                 </div> :
-                                <div div className="header__cart-list--item">
+                                <div className="header__cart-list--item">
                                     <h4>Sản Phẩm Đã Thêm</h4>
                                     <ul>
                                         {cartListItem.map((item, index) =>
