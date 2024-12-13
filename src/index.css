@@ -225,6 +225,9 @@ html {
     .App .modal__body button {
         width: 128px;
     }
+    .App .banner-right{
+        display: none;
+    }
 }
 
 /* 1240px */

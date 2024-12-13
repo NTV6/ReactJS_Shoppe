@@ -7,6 +7,7 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 import './Content.css'
+import Banner from './Banner';
 
 function Content() {
     const [activeCategory, setActiveCategory] = useState(null)
@@ -56,6 +57,7 @@ function Content() {
     return (
         <div className="body-container">
             <div className="grid">
+                <Banner />
                 <Row>
                     <Col lg={2} className='custom-padding wow animate__fadeInLeft'>
                         <div className="category hide-on-mobile-table">

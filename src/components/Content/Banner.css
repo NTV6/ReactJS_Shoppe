@@ -1,0 +1,30 @@
+.banner {
+    display: flex;
+}
+
+.banner-left {
+    object-fit: cover;
+    width: 804px;
+    border-radius: 5px;
+}
+
+.banner-left img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.banner-right {
+    display: flex;
+    flex-direction: column;
+    width: 385px;
+    margin-left: 10px;
+}
+
+.banner-right-1 img,
+.banner-right-2 img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
