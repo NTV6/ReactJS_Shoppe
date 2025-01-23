@@ -6,12 +6,12 @@
     object-fit: cover;
     width: 804px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .banner-left img {
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 .banner-right {
@@ -27,4 +27,13 @@
     width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.border-radius {
+    border-radius: 5px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    z-index: 0;
 }

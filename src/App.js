@@ -1,11 +1,15 @@
 import { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WOW from 'wowjs'
 import 'animate.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "./components/Header";
-import Content from "./components/Content";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Pay from "./pages/Pay";
+import ProductDetail from "./pages/ProductDetail";
+import NotFound from "./pages/NotPound";
 
 function App() {
 
@@ -18,11 +22,23 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <Content />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        {/* <nav>
+          <Link to="/">Home</Link>
+          <Link to="/productdetail">ProductDetail</Link>
+          <Link to="/pay">Pay</Link>
+        </nav> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/productdetail/:id" element={<ProductDetail />} />
+          <Route path="/pay" element={<Pay />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

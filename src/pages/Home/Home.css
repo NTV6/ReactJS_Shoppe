@@ -3,73 +3,7 @@
 .body-container {
     padding: 32px 16px;
     margin-top: var(--height-header);
-    background-color: #ededed;
-}
-
-/* ------------------------------------------------------------------------ */
-/* Category  */
-.category-on-tablet-mobile {
-    display: none;
-}
-
-.category {
-    font-size: 1.4rem;
-}
-
-.body-container .category {
-    border-radius: 5px;
-    background-color: white;
-}
-
-.body-container .category h3 {
-    margin: 0;
-    padding: 20px;
-    font-size: 1.6rem;
-    font-weight: 700;
-    border-bottom: 1px solid #d7d7d7;
-}
-
-.body-container .category h3 i {
-    font-size: 1.4rem;
-    padding-right: 8px;
-}
-
-.body-container .category ul {
-    padding: 12px;
-}
-
-.body-container .category-item {
-    overflow: hidden;
-    display: block;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-height: 24px;
-    font-size: 1.4rem;
-}
-
-.body-container .category ul li {
-    right: 0;
-    padding: 4px 20px;
-    list-style: none;
-    position: relative;
-    transition: right linear 0.1s;
-}
-
-.body-container .category ul li:hover {
-    right: -8px;
-    color: #f53e2d;
-    cursor: pointer;
-}
-
-.category-item--active::before {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-color: transparent transparent transparent #ff0000;
-    left: 9px;
-    top: 9px;
-    border-width: 6px 7px;
+    background-color: #f1f1f1;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -223,7 +157,7 @@
     -webkit-line-clamp: 1;
 }
 
-.product-item__price{
+.product-item__price {
     display: flex;
     justify-content: space-between;
 }
@@ -295,6 +229,18 @@
 
 .product-item__origin {
     padding-bottom: 12px;
+}
+
+.product-item__origin-brand {
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.product-item__origin-country {
+    white-space: nowrap;
 }
 
 .product-item__favorite {

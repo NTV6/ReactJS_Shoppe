@@ -13,7 +13,7 @@
 .modal__body {
     margin: auto;
     border-radius: 10px;
-    min-width: 500px;
+    min-width: 510px;
     background-color: var(--white-color);
     animation: Presently_Notification ease 0.3s;
 }

@@ -27,12 +27,12 @@ function Banner() {
     return (
         <div className="banner">
             <div id="carouselExampleAutoplaying" className="carousel slide banner-left" data-bs-ride="carousel">
-                <div className="carousel-inner">
+                <div className="carousel-inner border-radius">
                     <div className="carousel-item active">
                         <img src="https://cf.shopee.vn/file/vn-11134258-7ras8-m3aazcwgxo8ced_xxhdpi" className="d-block w-100" alt="Banner" />
                     </div>
                     {linkImg.map((item, index) =>
-                        <div className="carousel-item">
+                        <div className="carousel-item" key={index}>
                             <img src={item} className="d-block w-100" alt="Banner" />
                         </div>
                     )}
